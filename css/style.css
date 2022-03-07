@@ -87,10 +87,6 @@ h5,
 h6 {
   font-family: 'Federo', sans-serif;
 }
-body {
-  height: 3000px;
-  background-color: rebeccapurple;
-}
 .navbar-scroll {
   height: 100px;
   z-index: 999;
@@ -321,7 +317,7 @@ body {
   position: relative;
 }
 #welcome-Wrapper .welcome-one__right ul.welcome-one__points li .text p {
-  margin: 0 0 32 0;
+  margin: 0;
   overflow-wrap: break-word;
   font-size: 18px;
   font-weight: 400;
