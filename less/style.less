@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Federo', sans-serif;
 }
 
+.container {
+    max-width: 1200px;
+}
+
 .navbar-scroll{
     height: 100px;
     z-index: 999;
@@ -145,6 +149,10 @@ h1, h2, h3, h4, h5, h6{
     .welcome-one__left{
         max-width: 600px;
         margin: 0 auto;
+
+        @media only screen and (min-width: 992px){
+            margin-right: 70px;
+        }
         .welcome-one__img-box{
             position: relative;
             display: block;
@@ -165,6 +173,10 @@ h1, h2, h3, h4, h5, h6{
                     /*mix-blend-mode: luminosity;*/
                     height: 796px;
                     object-fit: cover;
+
+                    @media only screen and (min-width: 992px){
+                        height: 636px;
+                    }
                 }
             }
         }
@@ -226,6 +238,11 @@ h1, h2, h3, h4, h5, h6{
             margin: 80px auto 0;
         }
 
+        @media only screen and (min-width: 992px){
+            max-width: unset;
+            margin: 0;
+        }
+
         .section-title{
             margin-bottom: 26px;
 
@@ -256,6 +273,10 @@ h1, h2, h3, h4, h5, h6{
             font-weight: 400;
             line-height: 1.889em;
             color: var(--bt-text);
+
+            @media only screen and (min-width: 992px){
+                padding-bottom: 32px;
+            }
         }
 
         .welcome-one__bottom-title {
@@ -278,6 +299,8 @@ h1, h2, h3, h4, h5, h6{
 
                 .icon{
                     flex-basis: 10%;
+                    position: relative;
+                    margin-right: 8px;
 
                     .icon-tick::before {
                         content: url(/images/green-tick.svg);
@@ -341,5 +364,268 @@ h1, h2, h3, h4, h5, h6{
                 text-decoration: none;
             }
         }
+    }
+}
+
+#services-Wrapper{
+    padding: 60px 0;
+    background: url(/images/services-bg.png), radial-gradient(farthest-side at 50% 46%, #274078, #14161D);
+    // background: radial-gradient(ellipse at top, #14161D, transparent), radial-gradient(ellipse at bottom, #274078, transparent);
+    // background-image: radial-gradient(farthest-corner at 40px 40px,#14161D 0%, #274078 100%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+
+    @media only screen and (min-width: 992px){
+        padding: 120px 0 82px;
+    }
+
+    p.super{
+        font-weight: 700;
+        margin-bottom: .5rem;
+    }
+
+    ul.services-list{
+        list-style: none;
+        display: grid;
+        grid-gap: 2.5em;
+
+        @media only screen and (min-width: 768px){
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        @media only screen and (min-width: 992px){
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        li.service{
+            padding-right: .8em;
+            position: relative;
+            transition: all 500ms ease;
+
+            @media only screen and (min-width: 992px){
+                padding-right: 1.5em;
+                padding-bottom: 2em;
+            }
+
+            .icon{
+                margin-bottom: 20px;
+
+                @media only screen and (min-width: 768px){
+                    margin-bottom: 30px;
+                }
+            }
+
+            .number{
+                margin-bottom: 20px;
+            }
+
+            .title{
+                margin-bottom: 20px;
+
+                @media only screen and (min-width: 768px){
+                    margin-bottom: 30px;
+                }
+
+                h2{
+                    text-transform: uppercase;
+                }
+            }
+
+            ul.sub-services{
+                list-style: none;
+                position: relative;
+                display: grid;
+                grid-gap: .5em;
+
+                li{
+                    position: relative;
+
+                    &::before{
+                        content: url(/images/tick-small.svg);
+                        margin-right: 10px;
+                        position: absolute;
+                    }
+
+                    a{
+                        text-decoration: none;
+                        margin-left: 20px;
+                        display: block;
+                        line-height: 22px;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            div.arrow{
+                height: 12px;
+                background: url(/images/arrow-right.svg) left center no-repeat;
+                margin-top: 20px;
+                position: absolute;
+                width: 38px;
+                bottom: 0;
+                background-size: 80%;
+                transition: all 500ms ease;
+            }
+
+            &:hover{
+                transition: all 500ms ease;
+                div.arrow{
+                    background: url(/images/arrow-right-green.svg) left center no-repeat;
+                    transition: all 500ms ease;
+                }
+
+                .title{
+                    h2{
+                        color: var(--bt-blue) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    div.qoute{
+        padding: 40px 0 0 0;
+        border-top: 1px solid #585858;
+        margin-top: 3em;
+
+        p{
+            color: #898989;
+            text-align: center;
+            font-size: 120%;
+            font-weight: 600;
+
+            a{
+                text-decoration: none;
+                color: #fff;
+                position: relative;
+                border-bottom: 2px solid var(--bt-orange);
+            }
+        }
+    }
+  
+}
+
+#portfolio-wrapper{
+    background: linear-gradient(to bottom, transparent 50%, #F5F4F4 50%), url(/images/portfolio-bg@2x.png);
+    // background-attachment: fixed;
+    padding: 60px 0;
+
+    @media only screen and (min-width: 992px){
+        padding: 120px 0 82px;
+    }
+
+    h2.title{
+        text-align: center;
+        margin-bottom: 2em;
+        line-height: 38px;
+
+        em{
+            font-style: normal;
+            border-bottom: 2px solid var(--bt-orange);
+        }
+
+        @media only screen and (min-width: 992px){
+            padding: 0 7em;
+            line-height: 1.6;
+            font-size: 220%;
+        }
+    }
+
+    .content{
+        padding: 1.5em;
+        background: #fff;
+
+        @media only screen and (min-width: 768px){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1.5em;
+            background: url('../images/portfolio-mesh.png')center center repeat-x, #fff;
+        }
+
+        @media only screen and (min-width: 992px){
+            padding: 3.5em;
+            grid-gap: 2em;
+        }
+
+        .left{
+            .img-wrapper{
+                position: relative;
+                margin-bottom: 2em;
+    
+                @media only screen and (min-width: 768px){
+                    margin-bottom: unset;
+                    width: 95%;
+                    left: 18px;
+
+                    &::before{
+                        position: absolute;
+                        bottom: 0;
+                        left: -18px;
+                        height: 160px;
+                        width: 12px;
+                        content: "";
+                        background-color: var(--bt-orange);
+                    }
+                }
+    
+                img{
+                    width: 100%;
+        
+                   
+                }
+            }
+        }
+
+        .right{
+            @media only screen and (min-width: 992px){
+                padding-top: 2em;
+            }
+
+            h5{
+                text-transform: uppercase;
+                color: var(--bt-blue);
+                line-height: 30px;
+
+                @media only screen and (min-width: 992px){
+                    font-size: 150%;
+                    line-height: 1.6;
+                    margin-bottom: 1.2em;
+                }
+            }
+
+            p{
+                color: var(--bt-text);
+
+                @media only screen and (min-width: 992px){
+                    font-size: 120%;
+                    line-height: 1.8;
+                    margin-bottom: 2.5em;
+                }
+            }
+
+            .btn{
+                border: 3px solid var(--bt-orange);
+                text-transform: uppercase;
+                border-radius: 0;
+                font-size: 75%;
+                font-weight: 700;
+                padding: 12px 30px;
+
+                @media only screen and (min-width: 992px){
+                    font-size: 80%;
+                    padding: 15px 40px;
+                }
+
+                &:hover{
+                    color: #fff;
+                    background-color: var(--bt-orange);
+                }
+            }
+        }
+        
     }
 }
