@@ -12164,6 +12164,13 @@ h6 {
 .container {
   max-width: 1200px;
 }
+button a {
+  text-decoration: none;
+  color: #fff;
+}
+button a:hover {
+  color: #fff;
+}
 .navbar-scroll {
   height: 100px;
   z-index: 100;
@@ -12740,6 +12747,13 @@ h6 {
   #portfolio-wrapper {
     padding: 120px 0 82px;
   }
+}
+#portfolio-wrapper button a {
+  text-decoration: none;
+  color: var(--bt-orange);
+}
+#portfolio-wrapper button a:hover {
+  color: #fff;
 }
 #portfolio-wrapper h2.title {
   text-align: center;
