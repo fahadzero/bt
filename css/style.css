@@ -3,70 +3,70 @@
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/barlow/v11/7cHrv4kjgoGqM7E3b8s8.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/barlow/v12/7cHrv4kjgoGqM7E3b8s8.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 200;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/barlow/v11/7cHqv4kjgoGqM7E3w-oc4A.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E3w-oc4A.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/barlow/v11/7cHqv4kjgoGqM7E3p-kc4A.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E3p-kc4A.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/barlow/v11/7cHpv4kjgoGqM7EPCw.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/barlow/v12/7cHpv4kjgoGqM7EPCw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/barlow/v11/7cHqv4kjgoGqM7E3_-gc4A.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E3_-gc4A.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/barlow/v11/7cHqv4kjgoGqM7E30-8c4A.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E30-8c4A.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/barlow/v11/7cHqv4kjgoGqM7E3t-4c4A.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E3t-4c4A.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/barlow/v11/7cHqv4kjgoGqM7E3q-0c4A.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E3q-0c4A.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Barlow';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/barlow/v11/7cHqv4kjgoGqM7E3j-wc4A.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E3j-wc4A.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Federo';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/federo/v17/iJWFBX-cbD_ETsbmjQ.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/federo/v19/iJWFBX-cbD_ETsbmjQ.ttf) format('truetype');
 }
 /*!
  * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
@@ -12289,6 +12289,14 @@ button a:hover {
   height: max-content;
   margin: auto;
 }
+.navbar .nav-wrapper_right .nav-wrapper_search-box a img {
+  width: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .navbar .nav-wrapper_right .nav-wrapper_search-box a img {
+    width: 27px;
+  }
+}
 .navbar .nav-wrapper_right .nav-wrapper_menu-toggler .navbar-toggler {
   display: block !important;
   border-color: none !important;
@@ -12336,8 +12344,12 @@ button a:hover {
   font-family: 'Barlow', sans-serif;
   font-size: 20px;
 }
+.navbar-fixed .nav-wrapper_right .nav-wrapper_menu-toggler {
+  position: relative;
+}
 .navbar-fixed .nav-wrapper_right .nav-wrapper_menu-toggler .navbar-toggler {
   display: block !important;
+  z-index: 9999;
 }
 .navbar-fixed .nav-wrapper_right .nav-wrapper_menu-toggler .navbar-toggler span {
   position: relative;
@@ -12354,7 +12366,7 @@ button a:hover {
   box-shadow: none;
 }
 #hero-wrapper {
-  height: 66vh;
+  height: 75vh;
   background: url(../images/hero@2x.jpg) center center no-repeat;
   background-size: cover;
   z-index: 99;
@@ -12362,6 +12374,7 @@ button a:hover {
 }
 @media (min-width: 768px) {
   #hero-wrapper {
+    height: 52vh;
     -webkit-animation: zoomIn 40s linear infinite;
     animation: zoomIn 40s linear infinite;
     position: relative;
@@ -12378,7 +12391,7 @@ button a:hover {
     }
   }
 }
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
   #hero-wrapper {
     height: 100vh;
   }
@@ -12408,14 +12421,21 @@ button a:hover {
   position: absolute;
 }
 #hero-wrapper .floating-area ul.clients {
-  padding: 1em 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1em;
   list-style: none;
-  justify-content: space-between;
   z-index: 9;
   position: relative;
+  padding: 1em 0;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  #hero-wrapper .floating-area ul.clients {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 #hero-wrapper .floating-area ul.clients li {
   max-height: 65px;
@@ -12423,7 +12443,8 @@ button a:hover {
 }
 #hero-wrapper .floating-area ul.clients li img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 5/2;
+  object-fit: contain;
 }
 @media only screen and (min-width: 768px) {
   #hero-wrapper .floating-area ul.clients li img {
@@ -12436,10 +12457,20 @@ button a:hover {
   }
 }
 #hero-wrapper .hero-content {
-  padding: 10em 0 7em;
+  padding: 6.5em 0 0 0;
   position: relative;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 390px) {
+  #hero-wrapper .hero-content {
+    padding: 11.5em 0 0 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #hero-wrapper .hero-content {
+    padding: 10em 0 0 1.5em;
+  }
+}
+@media only screen and (min-width: 1200px) {
   #hero-wrapper .hero-content {
     padding: 24vh 0 18vh;
   }
@@ -12448,7 +12479,7 @@ button a:hover {
   font-size: 270%;
   margin-bottom: 0.6em;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   #hero-wrapper .hero-content h1 {
     font-size: 350%;
   }
@@ -12457,7 +12488,7 @@ button a:hover {
   font-weight: 1;
   font-size: 125%;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   #hero-wrapper .hero-content p {
     font-size: 190%;
   }
@@ -12474,7 +12505,7 @@ button a:hover {
   border-radius: 0;
   transition: all 500ms ease;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   #hero-wrapper .hero-content .buttons .btn {
     font-size: 80%;
     padding: 1.1em 3em;
@@ -12500,15 +12531,29 @@ button a:hover {
 #welcome-Wrapper {
   position: relative;
   display: block;
-  padding: 120px 0 120px;
+  padding: 60px 0;
   z-index: 1;
   background-color: #F1F1F1;
 }
-#welcome-Wrapper .welcome-one__left {
-  max-width: 600px;
-  margin: 0 auto;
+@media only screen and (min-width: 768px) {
+  #welcome-Wrapper {
+    padding: 85px 30px;
+  }
 }
 @media only screen and (min-width: 992px) {
+  #welcome-Wrapper {
+    padding: 85px 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #welcome-Wrapper {
+    padding: 120px 0;
+  }
+}
+#welcome-Wrapper .welcome-one__left {
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1200px) {
   #welcome-Wrapper .welcome-one__left {
     margin-right: 70px;
   }
@@ -12520,17 +12565,24 @@ button a:hover {
 #welcome-Wrapper .welcome-one__left .welcome-one__img-box::before {
   position: absolute;
   bottom: 0;
-  left: -40px;
   height: 224px;
   width: 20px;
   content: "";
   background-color: var(--bt-green);
 }
+#welcome-Wrapper .welcome-one__left .welcome-one__img-box .welcome-one__img {
+  margin-left: 35px;
+}
+@media only screen and (min-width: 768px) {
+  #welcome-Wrapper .welcome-one__left .welcome-one__img-box .welcome-one__img {
+    margin-left: 40px;
+  }
+}
 #welcome-Wrapper .welcome-one__left .welcome-one__img-box .welcome-one__img img {
   width: 100%;
   transition: all 900ms ease;
   /*mix-blend-mode: luminosity;*/
-  height: 796px;
+  height: 400px;
   object-fit: cover;
 }
 @media only screen and (min-width: 992px) {
@@ -12540,14 +12592,25 @@ button a:hover {
 }
 #welcome-Wrapper .welcome-one__experience {
   position: absolute;
-  top: 74px;
-  left: -94px;
-  background-color: #ffffff;
-  box-shadow: 0px 10px 60px 0px rgba(161, 156, 156, 0.1);
-  padding: 29px 40px 28px;
+  top: 20px;
+  padding: 20px 20px 15px;
   display: flex;
   align-items: center;
   z-index: 2;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 60px 0px rgba(161, 156, 156, 0.1);
+}
+@media only screen and (min-width: 768px) {
+  #welcome-Wrapper .welcome-one__experience {
+    top: 35px;
+    padding: 20px 30px 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #welcome-Wrapper .welcome-one__experience {
+    top: 74px;
+    padding: 29px 40px 28px;
+  }
 }
 #welcome-Wrapper .welcome-one__experience .welcome-one__experience-icon {
   position: relative;
@@ -12580,17 +12643,15 @@ button a:hover {
 #welcome-Wrapper .welcome-one__right {
   position: relative;
   display: block;
-  margin-top: 60px;
+  margin-bottom: 45px;
 }
 @media only screen and (min-width: 768px) {
   #welcome-Wrapper .welcome-one__right {
-    max-width: 600px;
-    margin: 80px auto 0;
+    margin: 0 auto 25px;
   }
 }
 @media only screen and (min-width: 992px) {
   #welcome-Wrapper .welcome-one__right {
-    max-width: unset;
     margin: 0;
   }
 }
@@ -12638,7 +12699,6 @@ button a:hover {
   position: relative;
   display: block;
   margin-top: 30px;
-  margin-bottom: 39px;
 }
 #welcome-Wrapper .welcome-one__right ul.welcome-one__points li {
   position: relative;
@@ -12686,7 +12746,6 @@ button a:hover {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  -webkit-appearance: none;
   outline: none !important;
   background-color: transparent;
   color: #000;
@@ -12709,10 +12768,15 @@ button a:hover {
 }
 @media only screen and (min-width: 768px) {
   #services-Wrapper {
-    padding: 60px 30px;
+    padding: 85px 30px;
   }
 }
 @media only screen and (min-width: 992px) {
+  #services-Wrapper {
+    padding: 85px 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
   #services-Wrapper {
     padding: 120px 0 82px;
   }
@@ -12829,6 +12893,13 @@ button a:hover {
   position: relative;
   border-bottom: 2px solid var(--bt-orange);
 }
+@media only screen and (max-width: 330px) {
+  #services-Wrapper div.qoute p a {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+  }
+}
 #portfolio-wrapper {
   background: linear-gradient(to bottom, transparent 50%, #F5F4F4 50%), url(../images/portfolio-bg@2x.png);
   padding: 60px 0;
@@ -12904,6 +12975,11 @@ button a:hover {
 }
 @media only screen and (min-width: 992px) {
   #portfolio-wrapper .content .right {
+    padding-top: 1.5em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #portfolio-wrapper .content .right {
     padding-top: 2em;
   }
 }
@@ -12913,6 +12989,13 @@ button a:hover {
   line-height: 30px;
 }
 @media only screen and (min-width: 992px) {
+  #portfolio-wrapper .content .right h5 {
+    font-size: 135%;
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+}
+@media only screen and (min-width: 1200px) {
   #portfolio-wrapper .content .right h5 {
     font-size: 150%;
     line-height: 1.6;
@@ -12924,8 +13007,14 @@ button a:hover {
 }
 @media only screen and (min-width: 992px) {
   #portfolio-wrapper .content .right p {
-    font-size: 120%;
+    font-size: 115%;
     line-height: 1.8;
+    margin-bottom: 2em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #portfolio-wrapper .content .right p {
+    font-size: 120%;
     margin-bottom: 2.5em;
   }
 }
@@ -13081,7 +13170,7 @@ footer .footer-middle .links ul {
   }
 }
 footer .footer-middle .image {
-  width: 30%;
+  width: 55%;
   margin: 1em auto;
 }
 @media only screen and (min-width: 768px) {
@@ -13112,20 +13201,20 @@ footer .footer-lower p em {
   font-style: normal;
   color: var(--bt-orange);
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   footer .footer-lower p.copyright {
-    text-align: left;
+    text-align: right;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   footer .footer-lower p.disclaimer {
-    text-align: right;
+    text-align: left;
   }
 }
 #title-wrapper {
   background: url(../images/title-bg@2x.jpg) center center no-repeat;
   background-size: cover;
-  padding: 80px 0;
+  padding: 120px 0 80px;
   z-index: 99;
   position: relative;
 }
@@ -13142,6 +13231,12 @@ footer .footer-lower p em {
 #title-wrapper .breadcrumb {
   width: max-content;
   margin: 0 auto 1em;
+  display: none;
+}
+@media only screen and (min-width: 470px) {
+  #title-wrapper .breadcrumb {
+    display: flex;
+  }
 }
 #title-wrapper .breadcrumb li a {
   text-decoration: none;
@@ -13885,7 +13980,8 @@ footer .footer-lower p em {
   }
 }
 .page-node-contacts #content-wrapper .form-wrapper .form-inner form input,
-.page-node-contacts #content-wrapper .form-wrapper .form-inner form textarea {
+.page-node-contacts #content-wrapper .form-wrapper .form-inner form textarea,
+.page-node-contacts #content-wrapper .form-wrapper .form-inner form select {
   width: 100%;
   margin-bottom: 10px;
   border: none;
@@ -13895,15 +13991,20 @@ footer .footer-lower p em {
 }
 @media only screen and (min-width: 992px) {
   .page-node-contacts #content-wrapper .form-wrapper .form-inner form input,
-  .page-node-contacts #content-wrapper .form-wrapper .form-inner form textarea {
+  .page-node-contacts #content-wrapper .form-wrapper .form-inner form textarea,
+  .page-node-contacts #content-wrapper .form-wrapper .form-inner form select {
     margin-bottom: 20px;
   }
 }
 .page-node-contacts #content-wrapper .form-wrapper .form-inner form input::placeholder,
-.page-node-contacts #content-wrapper .form-wrapper .form-inner form textarea::placeholder {
+.page-node-contacts #content-wrapper .form-wrapper .form-inner form textarea::placeholder,
+.page-node-contacts #content-wrapper .form-wrapper .form-inner form select::placeholder {
   color: #BCBCBC;
   text-transform: capitalize;
   font-size: 90%;
+}
+.page-node-contacts #content-wrapper .form-wrapper .form-inner form select {
+  min-height: 40px;
 }
 .page-node-contacts #content-wrapper .form-wrapper .form-inner form textarea {
   min-height: 120px;
