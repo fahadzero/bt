@@ -174,6 +174,14 @@ button{
             a{
                 height: max-content;
                 margin: auto;
+
+                img{
+                    width: 20px;
+
+                    @media only screen and (min-width: 768px){
+                        width: 27px;
+                    }
+                }
             }
         }
 
@@ -238,8 +246,11 @@ button{
         }
 
         .nav-wrapper_menu-toggler {
+            position: relative;
+
             .navbar-toggler{
                 display: block !important;
+                z-index: 9999;
 
                 span{
                     position: relative;
@@ -257,12 +268,29 @@ button{
                     box-shadow: none;
                 }
             }
+
+            
         }
     }
 }
 
+// #navbarNav{
+//     position: absolute;
+//     width: 100%;
+//     height: 100vh;
+//     background: #000;
+//     z-index: 999;
+//     top: 0;
+//     left: 0;
+// }
+    
+
+
+
+
+
 #hero-wrapper{
-    height: 66vh;
+    height: 75vh;
     background: url(../images/hero@2x.jpg) center center no-repeat;
     background-size: cover;
     z-index: 99;
@@ -271,6 +299,7 @@ button{
 
 
     @media (min-width: 768px) {
+        height: 52vh;
         -webkit-animation: zoomIn 40s linear infinite;
         animation: zoomIn 40s linear infinite;
         position: relative;
@@ -288,7 +317,7 @@ button{
         }
     }
 
-    @media (min-width: 960px) {
+    @media (min-width: 1200px) {
         height: 100vh;
 
         @keyframes zoomIn {
@@ -319,14 +348,22 @@ button{
        } 
 
         ul.clients{
-            padding: 1em 0;
-            margin: 0;
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 1em;
             list-style: none;
-            justify-content: space-between;
             z-index: 9;
             position: relative;
+            padding: 1em 0;
+            margin: 0;
+          
+
+            @media only screen and (min-width: 768px){
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
 
             
             li{
@@ -335,7 +372,8 @@ button{
 
                 img{
                     width: 100%;
-                    height: auto;
+                    aspect-ratio: 5/2;
+                    object-fit: contain;
 
                     @media only screen and (min-width: 768px){
                         width: 75%;
@@ -350,10 +388,18 @@ button{
     }
 
     .hero-content{
-        padding: 10em 0 7em;
+        padding: 6.5em 0 0 0;
         position: relative;
 
-        @media only screen and (min-width: 992px){
+        @media only screen and (min-width: 390px){
+            padding: 11.5em 0 0 0;
+        }
+
+        @media only screen and (min-width: 768px){
+            padding: 10em 0 0 1.5em;
+        }
+        
+        @media only screen and (min-width: 1200px){
             padding: 24vh 0 18vh;
         }
 
@@ -361,7 +407,7 @@ button{
             font-size: 270%;
             margin-bottom: .6em;
 
-            @media only screen and (min-width: 992px){
+            @media only screen and (min-width: 1200px){
                 font-size: 350%;
             }
         }
@@ -370,7 +416,7 @@ button{
             font-weight: 1;
             font-size: 125%;
 
-            @media only screen and (min-width: 992px){
+            @media only screen and (min-width: 1200px){
                 font-size: 190%;
             }
         }
@@ -387,7 +433,7 @@ button{
                 border-radius: 0;
                 transition: all 500ms ease;
 
-                @media only screen and (min-width: 992px){
+                @media only screen and (min-width: 1200px){
                     font-size: 80%;
                     padding: 1.1em 3em;
                 }
@@ -423,15 +469,26 @@ button{
 #welcome-Wrapper{
     position: relative;
     display: block;
-    padding: 120px 0 120px;
+    padding: 60px 0;
     z-index: 1;
     background-color: #F1F1F1;
 
+    @media only screen and (min-width: 768px){
+        padding: 85px 30px;
+    }
+
+    @media only screen and (min-width: 992px){
+        padding: 85px 0;
+    }
+
+    @media only screen and (min-width: 1200px){
+        padding: 120px 0;
+    }
+
     .welcome-one__left{
-        max-width: 600px;
         margin: 0 auto;
 
-        @media only screen and (min-width: 992px){
+        @media only screen and (min-width: 1200px){
             margin-right: 70px;
         }
         .welcome-one__img-box{
@@ -441,18 +498,23 @@ button{
             &::before{
                 position: absolute;
                 bottom: 0;
-                left: -40px;
                 height: 224px;
                 width: 20px;
                 content: "";
                 background-color: var(--bt-green);
             }
             .welcome-one__img {
+                margin-left: 35px;
+
+                @media only screen and (min-width: 768px){
+                    margin-left: 40px;
+                }
+
                 img {
                     width: 100%;
                     transition: all 900ms ease;
                     /*mix-blend-mode: luminosity;*/
-                    height: 796px;
+                    height: 400px;
                     object-fit: cover;
 
                     @media only screen and (min-width: 992px){
@@ -465,14 +527,23 @@ button{
 
     .welcome-one__experience {
         position: absolute;
-        top: 74px;
-        left: -94px;
-        background-color: #ffffff;
-        box-shadow: 0px 10px 60px 0px rgba(161, 156, 156, 0.1);
-        padding: 29px 40px 28px;
+        top: 20px;
+        padding: 20px 20px 15px;
         display: flex;
         align-items: center;
         z-index: 2;
+        background-color: #ffffff;
+        box-shadow: 0px 10px 60px 0px rgba(161, 156, 156, 0.1);
+
+        @media only screen and (min-width: 768px){
+            top: 35px;
+            padding: 20px 30px 20px;
+        }
+
+        @media only screen and (min-width: 992px){
+            top: 74px;
+            padding: 29px 40px 28px;
+        }
 
         .welcome-one__experience-icon{
             position: relative;
@@ -512,15 +583,13 @@ button{
     .welcome-one__right {
         position: relative;
         display: block;
-        margin-top: 60px;
+        margin-bottom: 45px;
 
         @media only screen and (min-width: 768px){
-            max-width: 600px;
-            margin: 80px auto 0;
+            margin: 0 auto 25px;
         }
 
         @media only screen and (min-width: 992px){
-            max-width: unset;
             margin: 0;
         }
 
@@ -572,7 +641,6 @@ button{
             position: relative;
             display: block;
             margin-top: 30px;
-            margin-bottom: 39px;
 
             li{
                 position: relative;
@@ -630,7 +698,6 @@ button{
                 position: relative;
                 display: inline-block;
                 vertical-align: middle;
-                -webkit-appearance: none;
                 outline: none !important;
                 background-color: transparent;
                 color: #000;
@@ -658,10 +725,14 @@ button{
     background-position-y: bottom;
 
     @media only screen and (min-width: 768px){
-        padding: 60px 30px;
+        padding: 85px 30px;
     }
 
     @media only screen and (min-width: 992px){
+        padding: 85px 0;
+    }
+
+    @media only screen and (min-width: 1200px){
         padding: 120px 0 82px;
     }
 
@@ -788,6 +859,12 @@ button{
                 color: #fff;
                 position: relative;
                 border-bottom: 2px solid var(--bt-orange);
+
+                @media only screen and (max-width: 330px){
+                    display: block;
+                    width: max-content;
+                    margin: 0 auto;
+                }
             }
         }
     }
@@ -878,6 +955,10 @@ button{
 
         .right{
             @media only screen and (min-width: 992px){
+                padding-top: 1.5em;
+            }
+
+            @media only screen and (min-width: 1200px){
                 padding-top: 2em;
             }
 
@@ -887,6 +968,12 @@ button{
                 line-height: 30px;
 
                 @media only screen and (min-width: 992px){
+                    font-size: 135%;
+                    line-height: 1.6;
+                    margin-bottom: 1em;
+                }
+
+                @media only screen and (min-width: 1200px){
                     font-size: 150%;
                     line-height: 1.6;
                     margin-bottom: 1.2em;
@@ -897,8 +984,13 @@ button{
                 color: var(--bt-text);
 
                 @media only screen and (min-width: 992px){
-                    font-size: 120%;
+                    font-size: 115%;
                     line-height: 1.8;
+                    margin-bottom: 2em;
+                }
+
+                @media only screen and (min-width: 1200px){
+                    font-size: 120%;
                     margin-bottom: 2.5em;
                 }
             }
@@ -1077,7 +1169,7 @@ footer{
         }
 
         .image{
-            width: 30%;
+            width: 55%;
             margin: 1em auto;
 
             @media only screen and (min-width: 768px){
@@ -1112,14 +1204,14 @@ footer{
             }
 
             &.copyright{
-                @media only screen and (min-width: 768px){
-                    text-align: left;
+                @media only screen and (min-width: 992px){
+                    text-align: right;
                 }
             }
 
             &.disclaimer{
-                @media only screen and (min-width: 768px){
-                    text-align: right;
+                @media only screen and (min-width: 992px){
+                    text-align: left;
                 }
             }
         }
@@ -1129,7 +1221,7 @@ footer{
 #title-wrapper{
     background: url(../images/title-bg@2x.jpg) center center no-repeat;
     background-size: cover;
-    padding: 80px 0;
+    padding: 120px 0 80px;
     z-index: 99;
     position: relative;
 
@@ -1144,6 +1236,11 @@ footer{
     .breadcrumb{
         width: max-content;
         margin: 0 auto 1em;
+        display: none;
+
+        @media only screen and (min-width: 470px){
+            display: flex;
+        }
 
         li{
             a{
@@ -1990,7 +2087,7 @@ footer{
                 }
 
                 form{
-                    input, textarea{
+                    input, textarea, select{
                         width: 100%;
                         margin-bottom: 10px;
                         border: none;
@@ -2007,6 +2104,10 @@ footer{
                             text-transform: capitalize;
                             font-size: 90%;
                         }
+                    }
+
+                    select{
+                        min-height: 40px;
                     }
 
                     textarea{
